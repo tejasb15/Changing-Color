@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BG Color Switch</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: #29ec5a;
+            box-sizing: border-box;
+        }
+
+        button {
+            font-size: 2.5rem;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            position: absolute;
+            top: 40%;
+            left: 40%;
+            padding: 1rem;
+            border-radius: .5rem;
+            background: #fff;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <button>Switch Color</button>
+
+    <script>
+        let color = ['red', 'yellow', 'blue', 'green', 'violet', 'purple'];
+        let i = 0;
+        document.querySelector("button").addEventListener("click", () => {
+            if (i < color.length) {
+                document.querySelector("body").style.background = color[i];
+                i++;
+            }
+            else {
+                i = 0;
+            }
+        });
+    </script>
+</body>
+
+</html>
